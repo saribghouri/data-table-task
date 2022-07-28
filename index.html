@@ -31,19 +31,17 @@
           row += "<th>" + year[i];
         }
 
-        for (var i = 0; i < year.length; i++) {
-          for (var j = 0; j < [i].length; j++) {
-            row += "<tr><th>" + [i] + "</th>";
-            row += "<th>" + firstNames[i] + "</th>";
-            row += "<th>" + secondNames[i] + "</th>";
-            row += "<th>" + phones[i] + "</th>";
-            row += "<th>" + genders[i] + "</th>";
-            row += "<th>" + emails[i] + "</th>";
-          }
+        for (var j = 0; j < firstNames.length; j++) {
+          row += "<tr><th>" + [j] + "</th>";
+          row += "<th>" + firstNames[j] + "</th>";
+          row += "<th>" + secondNames[j] + "</th>";
+          row += "<th>" + phones[j] + "</th>";
+          row += "<th>" + genders[j] + "</th>";
+          row += "<th>" + emails[j] + "</th>";
         }
-
         tabellget.innerHTML = row;
       };
+
       window.onload = tabellOp;
     </script>
   </body>
