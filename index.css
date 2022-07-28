@@ -1,0 +1,9 @@
+#main {
+  border: 1px solid;
+}
+
+h3 {
+  border: 1px solid;
+  margin-right: 10px;
+  display: flex;
+}

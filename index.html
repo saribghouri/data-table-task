@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <table id="tabell" border="1px"></table>
+
+    <script>
+      const tabellOp = () => {
+        let firstNames = ["Mohsin", "sarib", "Ahmad", "ifran", "Atif"];
+        let secondNames = ["Ghani", "Ghouri", "imran", "sheikh", "umer"];
+        let phones = [
+          "03432195645",
+          "03404001628",
+          "03172296946",
+          "03142588176",
+          "03010306020",
+        ];
+        let genders = ["Male", "Male", "Male", "Male", "Male"];
+        let emails = [
+          "mohsin.ghani777@gmail.com",
+          "sarib.ghouri92@gmail.com",
+          "ahmed.eng2709@gmail.com",
+          "irfan.sheikh54@gmail.com",
+          "Atif.umer502@gmail.com",
+        ];
+
+        var year = ["firstName", "lastName", "phone", "gender", "email"];
+        var tabellget = document.querySelector("#tabell");
+        var row = "<tr><th> no</th>";
+        for (var i = 0; i < year.length; i++) {
+          row += "<th>" + year[i];
+        }
+
+        for (var i = 0; i < year.length; i++) {
+          for (var j = 0; j < [i].length; j++) {
+            row += "<tr><th>" + [i] + "</th>";
+            row += "<th>" + firstNames[i] + "</th>";
+            row += "<th>" + secondNames[i] + "</th>";
+            row += "<th>" + phones[i] + "</th>";
+            row += "<th>" + genders[i] + "</th>";
+            row += "<th>" + emails[i] + "</th>";
+          }
+        }
+
+        tabellget.innerHTML = row;
+      };
+      window.onload = tabellOp;
+    </script>
+  </body>
+</html>
